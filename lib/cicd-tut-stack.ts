@@ -16,7 +16,7 @@ export class CicdTutStack extends cdk.Stack {
       authType: lambda.FunctionUrlAuthType.NONE,
       cors: {
         allowedOrigins: ["*"],
-        allowedMethods: ["*"],
+        allowedMethods: [lambda.HttpMethod.ALL],
         allowedHeaders: ["*"],
       },
     });
@@ -26,3 +26,5 @@ export class CicdTutStack extends cdk.Stack {
     });
   }
 }
+
+
