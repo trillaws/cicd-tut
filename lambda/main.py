@@ -1,6 +1,7 @@
 def handler(event, context):
+    version = os.environ.get("VERSION", "0.0")
     response_body = {
         "message": "Hello World",
-        "version": "1.0.0"
+        "version": version
     }
     return {"statusCode": 200, "body": response_body}
